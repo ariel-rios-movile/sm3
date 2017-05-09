@@ -1,5 +1,5 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
+var keystone = require('keystone'),
+    Types = keystone.Field.Types;
 
 /**
  * Tab Model
@@ -12,9 +12,15 @@ var Tab = new keystone.List('Tab', {
 
 Tab.add({
     magazine: { type: Types.Relationship, ref: 'Magazine' },
+	type: { type: Types.Select, options: 'channel,static,external', default: 'channel' },
     token: { type: String, required: true },
-	type: { type: Types.Select, options: 'channel,static', default: 'channel' }
+    title: { type: String },
+    url: { type: Types.Url }
+    // freeOn: {
+    //     carrier1: { type: Types.Boolean },
+    //     carrier2: { type: Types.Boolean },
+    // }
 });
 
-Tab.defaultColumns = 'magazine,token,type';
+Tab.defaultColumns = 'token,magazine,type,title,url';
 Tab.register();
