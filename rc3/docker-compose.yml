@@ -1,0 +1,21 @@
+---
+version: '3'
+services:
+
+  wordpress:
+    build:
+      context: web
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+    depends_on:
+      - mysql
+
+  mysql:
+    build:
+      context: db
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: example
