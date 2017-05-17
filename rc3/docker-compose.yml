@@ -9,6 +9,8 @@ services:
       - 80:80
     environment:
       WORDPRESS_DB_PASSWORD: example
+    volumes:
+      - "./themes:/var/www/html/wp-content/themes"
     depends_on:
       - mysql
 
