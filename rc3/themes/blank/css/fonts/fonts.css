@@ -1,0 +1,17 @@
+/*/////// OH MY DISNEY ////////*/
+
+@font-face {
+  font-family: 'FuturaStd-Medium';
+  src: url('FuturaStd-Medium.eot?#iefix') format('embedded-opentype'),  url('FuturaStd-Medium.otf')  format('opentype'),
+	     url('FuturaStd-Medium.woff') format('woff'), url('FuturaStd-Medium.ttf')  format('truetype'), url('FuturaStd-Medium.svg#FuturaStd-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaStd-Bold';
+  src: url('FuturaStd-Bold.eot?#iefix') format('embedded-opentype'),  url('FuturaStd-Bold.otf')  format('opentype'),
+	     url('FuturaStd-Bold.woff') format('woff'), url('FuturaStd-Bold.ttf')  format('truetype'), url('FuturaStd-Bold.svg#FuturaStd-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
