@@ -9,7 +9,7 @@
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
@@ -28,23 +28,33 @@
 		<!-- wrapper -->
 		<div class="wrapper">
 
-			<!-- header -->
 			<header class="header clear" role="banner">
 
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
+				<nav class="nav" role="navigation">
+					<?php html5blank_nav(); ?>
+				</nav>
 
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
+                <?php
+                $category = get_the_category();
+
+                if (sizeof($category) > 0) {
+                    $result = new WP_Query(array(
+                        'post_title' => get_the_category()[0]->slug,
+                        'post_status'  => 'inherit',
+                        'post_type' => 'attachment'
+                    ));
+
+
+                    if (sizeof($result->posts)) {
+                        $src = $result->posts[0]->guid;
+                    }
+                } else {
+                    $src = get_template_directory_uri()."/img/logo.svg";
+                }
+                ?>
+
+				<!-- logo -->
+                <img src="<?php echo $src; ?>" alt="Logo" class="logo-img">
+				<!-- /logo -->
 
 			</header>
-			<!-- /header -->

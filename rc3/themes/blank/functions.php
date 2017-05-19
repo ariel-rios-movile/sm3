@@ -65,8 +65,7 @@ if (function_exists('add_theme_support'))
 // HTML5 Blank navigation
 function html5blank_nav()
 {
-	wp_nav_menu(
-	array(
+	wp_nav_menu(array(
 		'theme_location'  => 'header-menu',
 		'menu'            => '',
 		'container'       => 'div',
@@ -83,8 +82,7 @@ function html5blank_nav()
 		'items_wrap'      => '<ul>%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => ''
-		)
-	);
+	));
 }
 
 // Load HTML5 Blank scripts (header.php)
