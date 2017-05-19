@@ -4,7 +4,7 @@
 2. ~~Multisite.~~
 3. Theme by site. ⬛⬛⬛⬛⬜⬜⬜⬜⬜ 45%
 4. Show tabs by country.
-5. Show tabs as an external link.
+5. ~~Show tabs as an external link.~~ (external links on menu)
 6. Validate subscription in one or more SBS application IDs, by country.
 7. GA code by site.
 8. Unsubscription button by carrier, by country.
