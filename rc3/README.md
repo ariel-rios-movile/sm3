@@ -1,8 +1,8 @@
 ## Requirements
 
 1. T&C changeable by country.
-2. Multisite.
-3. Theme by site.
+2. ~~Multisite.~~
+3. Theme by site. ⬛⬛⬛⬛⬜⬜⬜⬜⬜ 45%
 4. Show tabs by country.
 5. Show tabs as an external link.
 6. Validate subscription in one or more SBS application IDs, by country.
