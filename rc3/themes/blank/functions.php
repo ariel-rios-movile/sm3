@@ -79,7 +79,7 @@ function html5blank_nav()
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
+		'items_wrap'      => '<ul class="nav navbar-nav" style="top: 0px;">%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => ''
 	));
@@ -113,14 +113,14 @@ function html5blank_styles()
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', array('normalize'), '', 'all');
-    wp_enqueue_style('bootstrap_css');
-
     wp_register_style('legacy_style', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
     wp_enqueue_style('legacy_style'); // Enqueue it!
 
     wp_register_style('legacy_component', get_template_directory_uri() . '/css/component.css', array(), '1.0', 'all');
     wp_enqueue_style('legacy_component'); // Enqueue it!
+
+    wp_register_style('bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array('normalize'), '', 'all');
+    wp_enqueue_style('bootstrap_css');
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
