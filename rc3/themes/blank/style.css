@@ -82,7 +82,7 @@ input:focus {
 }
 /* header */
 .header {
-
+    margin: 60px 0 10px;
 }
 /* logo */
 .logo {

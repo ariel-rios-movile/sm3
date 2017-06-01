@@ -1,3 +1,6 @@
+<main role="main">
+	<!-- section -->
+
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 	<!-- article -->
@@ -30,4 +33,7 @@
 	</article>
 	<!-- /article -->
 
-<?php endif; ?>
+<?php
+    endif;
+    echo do_shortcode('[fbcomments]');
+?>

@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+    get_header();
+    get_sidebar();
+?>
 
 <main role="main">
 	<!-- section -->
