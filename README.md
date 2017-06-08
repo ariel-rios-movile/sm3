@@ -1,6 +1,6 @@
 ## How to create the environment
 
-* Install Docker
+* [Install Docker](https://docs.docker.com/engine/installation/linux/ubuntu/)
 * Install Python requirements: `pip install -r requirements.txt`
 * Build environment: `docker-compose build`
 * Get the environment up: `docker-compose up`
