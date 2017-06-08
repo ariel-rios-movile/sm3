@@ -1,3 +1,12 @@
+## How to create the environment
+
+* Install Docker
+* Install Python requirements: `pip install -r requirements.txt`
+* Build environment: `docker-compose build`
+* Get the environment up: `docker-compose up`
+* Go to http://localhost/ for site content.
+* Go to http://localhost/wp-admin/ for admin console.
+
 ## Requirements
 
 1. T&C changeable by country.
